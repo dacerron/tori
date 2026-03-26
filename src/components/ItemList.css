@@ -1,0 +1,131 @@
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 0;
+  min-width: 0;
+}
+
+.item-list--empty {
+  padding: 0.75rem 0;
+}
+
+.item-list__empty {
+  margin: 0;
+  color: var(--text-muted, #5c5c5c);
+  font-size: 0.9375rem;
+}
+
+.item-list__label {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted, #5c5c5c);
+}
+
+.item-list__strip {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.item-list__card {
+  flex: 0 0 auto;
+  width: 104px;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: 2px solid var(--border, #e0e0e0);
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  scroll-snap-align: start;
+}
+
+.item-list__card:hover {
+  border-color: #bdbdbd;
+}
+
+.item-list__card--selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.item-list__card:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.item-list__thumb-wrap {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-list__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.item-list__thumb-placeholder {
+  color: #9ca3af;
+  font-size: 1.25rem;
+}
+
+.item-list__name {
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .app__side .item-list__strip {
+    flex-direction: column;
+    overflow-x: visible;
+    overflow-y: auto;
+    max-height: min(42vh, 360px);
+    min-height: 0;
+    scroll-snap-type: none;
+  }
+
+  .app__side .item-list__card {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .app__side .item-list__thumb-wrap {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .app__side .item-list__name {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

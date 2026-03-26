@@ -1,0 +1,83 @@
+.toolbar-wrap {
+  margin-bottom: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--surface, #fafafa);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border, #e0e0e0);
+}
+
+.toolbar__file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.toolbar__btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e0e0e0);
+  background: #fff;
+  color: var(--text, #1a1a1a);
+  cursor: pointer;
+}
+
+.toolbar__btn:hover:not(:disabled) {
+  border-color: #bdbdbd;
+  background: #f5f5f5;
+}
+
+.toolbar__btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.toolbar__btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.toolbar__btn--danger {
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.toolbar__btn--danger:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.toolbar__msg {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+}
+
+.toolbar__msg--error {
+  color: #b91c1c;
+}
+
+.toolbar__msg--success {
+  color: #15803d;
+}
+
+.toolbar__msg--info {
+  color: var(--text-muted, #5c5c5c);
+}

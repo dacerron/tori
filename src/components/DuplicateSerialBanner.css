@@ -1,0 +1,27 @@
+.dup-banner {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #f59e0b;
+  background: #fffbeb;
+  color: #78350f;
+  font-size: 0.9375rem;
+}
+
+.dup-banner__title {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.dup-banner__list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.dup-banner__serial {
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.dup-banner__meta {
+  opacity: 0.85;
+}
